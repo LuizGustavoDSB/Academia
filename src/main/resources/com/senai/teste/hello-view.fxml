@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.senai.teste.HelloController"
+      alignment="CENTER"
+      spacing="12"
+      prefWidth="400"
+      prefHeight="480"
+      style="-fx-background-color: #fff0f6;">
+
+    <padding>
+        <Insets top="25" right="30" bottom="25" left="30"/>
+    </padding>
+
+    <Label text="Cadastro de Alunos"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #c2185b;"/>
+
+    <TextField fx:id="campoNome"
+               promptText="Nome completo"
+               maxWidth="300"/>
+
+    <TextField fx:id="campoCpf"
+               promptText="CPF"
+               maxWidth="300"/>
+
+    <TextField fx:id="campoContato"
+               promptText="Contato"
+               maxWidth="300"/>
+
+    <TextField fx:id="campoEndereco"
+               promptText="Endereço"
+               maxWidth="300"/>
+
+    <Button text="Cadastrar aluno"
+            onAction="#cadastrarAluno"
+            maxWidth="300"
+            style="-fx-background-color: #e91e63; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+    <Label fx:id="mensagem"
+           text="Preencha os dados do aluno."
+           wrapText="true"/>
+
+</VBox>
