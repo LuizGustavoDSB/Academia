@@ -13,14 +13,20 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource(
-                        "hello-view.fxml"
-                )
+                HelloApplication.class.getResource("hello-view.fxml")
         );
 
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
 
-        stage.setTitle("Cadastro de Alunos");
+        scene.getStylesheets().add(
+                HelloApplication.class
+                        .getResource("Style.css")
+                        .toExternalForm()
+        );
+
+        stage.setTitle("Academia Sul");
+        stage.setMinWidth(800);
+        stage.setMinHeight(600);
         stage.setScene(scene);
         stage.show();
     }
